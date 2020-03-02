@@ -1,0 +1,46 @@
+
+
+
+
+
+Your particular project will have a few key parts.
+
+1.  Data analysis and photometry.  you will probably do this using IRAF.
+
+ - first, you need to collect all the relevant data.  we have super-LOTIS and Kuiper images, and maybe others,  Dr. Andrews can help you get the relevant imaging data for SN2017gas.  there may also be archival data that we can find online (like the Open SN Catalog…see below).
+
+- next, you need to measure how bright the SN is in each filter on each date for which we have images. this is called photometry.  the basic idea is to measure the brightness of the SN and compare it to other stars in the same field that are not changing with time.  some of the data (like super-LOTIS might already have autmated photometry done. but in that case you need to collect it and check for any irregularity, like one date that is way off, or one fulter that is very out of step from the rest).  there are various ways to do this (aperture photometry, PSF fitting photometry, template subtraction, etc.) and jen can gove you some tips to get started.
+
+- once you have photometry, it needs to be tabulated.  usually a table has columns like this:
+
+date (calendar date or MJD)             filter                  apparent magnitude            1-sigma magnitude error
+
+although there are many variations of how to make a table depending on the data.  sometimes people put many filters in the same table, and therefore have many columns of mg and mag error for each filter.   we can talk about the best way to do this later, but looking at examples in papers is a good start.
+
+oh, and for the super-LOTIS data, the super-LOTIS page for SN2017gas is here: http://slotis.kpno.noao.edu/LOTIS/TARGETS/17gas.html  these data look ok to me with a smooth decline from peak, although i note that the latest  image shown on this page actually doesn;t inclyde the SN (chopped off above the field of view… must have been a pointing error).
+
+
+
+2.  make plots of the light curve.  there are many ways to do this too.  typically for a paper, we might have two different plots.  you will probably use Python to make these plots.  i don’t use Python (sadly), but I’ll bet that Jen Andrews could send you a python script for a light curve for one of her papers as an example to work from and adapt.
+
+- one plot would be the apparent magnitude of SN2017gas (y-axis) vs date (x-axis) plotted with all filters we have on the same plot.  maybe use different colors and/or plotting symbols.  see examples in the papers attacjed below.
+
+- another plot would be the absolute magnitude, which is made by taking the apparent magnitude and correcting for the distance to the SN host galaxy, as well as making a correction for line of sight reddening and extinction.  a lot of the important information to this can be found on this page of the open SN catalog:
+
+https://sne.space/sne/SN2017gas/
+
+- on this absolute magnitude light curve plot, we can also plot light curves of other well-studied SNe for comparison.  we can talk about this later.
+
+
+3.  as always, you will need to keep notes, and then write a summary of all the steps of your data reduction and analysis, so that we know what you did.  this doesn't need to be in any particular format, as long as you write down what you did.
+
+Ok, so that should get you started for your summer research.  I guess the first step is to make sure that you have a working computer with enough disk space to stire the imaging data (a few open GB is probably plenty), and that you have IRAF and Python installed and working on that machine.  Then Jen can put the imaging data someplace for you to get.  
+
+Cheers,
+
+-Nathan
+
+
+Below are a couple papers on some individual SNe with light curve plots and tables of photometry that you an use as examples.  Figures 2 and 5 in the first paper (SN2013L) show good examples of light curves of the apparent and absolute magnitudes, respectively.  Perhaps jen could send you the puython scripts that she used for these.
+
+
